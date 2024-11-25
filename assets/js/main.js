@@ -215,28 +215,28 @@
     height: '90vh'
   });
 
-  /**
-   * projects details slider
-   */
-  new Swiper('.projects-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
+  // /**
+  //  * projects details slider
+  //  */
+  // new Swiper('.projects-details-slider', {
+  //   speed: 400,
+  //   loop: true,
+  //   autoplay: {
+  //     delay: 5000,
+  //     disableOnInteraction: false
+  //   },
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     type: 'bullets',
+  //     clickable: true
+  //   }
+  // });
 
   /**
-   * Testimonials slider
+   * certifications slider
    */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
+  new Swiper('.certifications-slider', {
+    speed: 300,
     loop: true,
     autoplay: {
       delay: 5000,
@@ -249,6 +249,25 @@
       clickable: true
     }
   });
+
+  /**
+   * Init swiper sliders
+   */
+  function initSwiper() {
+    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+      let config = JSON.parse(
+        swiperElement.querySelector(".swiper-config").innerHTML.trim()
+      );
+
+      if (swiperElement.classList.contains("swiper-tab")) {
+        initSwiperWithCustomPagination(swiperElement, config);
+      } else {
+        new Swiper(swiperElement, config);
+      }
+    });
+  }
+
+  window.addEventListener("load", initSwiper);
 
   /**
    * Animation on scroll
