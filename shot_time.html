@@ -46,20 +46,16 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-8">
+          <div class="col-lg-7">
             <div class="projects-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/projects/stock1.png" alt="">
+                  <img src="assets/img/projects/shot1.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/projects/stock2.webp" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/projects/stock3.webp" alt="">
+                  <img src="assets/img/projects/shot2.png" alt="">
                 </div>
 
               </div>
@@ -67,22 +63,20 @@
             </div>
           </div>
 
-          <div class="col-lg-4">
+          <div class="col-lg-5">
             <div class="projects-info">
-              <h3>Project information</h3>
+              <!-- <h3>Project information</h3> -->
               <ul>
-                <li><strong>Project Name</strong>: Video Shots Time Detection</li>
-                <li><strong>Tech Stack Used</strong>: Python, Librosa Library</li>
+                <li>Project Title:<br><strong>Video Shots Time Detection</strong></li>
+                <li>Tech Stack:<br><strong>Python, Librosa Library, Java, OpenCV, NumPy, SQLite, Matplotlib</strong></li>
               </ul>
             </div>
             <div class="projects-description">
               <h2>Project Details</h2>
-              <p style="text-align: justify;">
-                -> Built a system for detecting scene changes in videos.
-              </p>
-              <p style="text-align: justify;">
-                -> Employed color comparison and audio analysis techniques through Librosa library for accurate detection.
-              </p>
+              <ul style="text-align: justify;">
+                <li>The system utilized OpenCV to extract frames and detect visual scene changes through color comparison, while Librosa was used for audio analysis to identify audio shifts indicating scene transitions. This dual approach ensured accurate detection of both subtle and obvious scene changes across different video types.</li><br>
+                <li>OpenCV handled video frame extraction, NumPy enabled fast pixel analysis, Matplotlib visualized scene changes, and SQLite stored metadata such as timestamps of detected scene transitions, ensuring the system was scalable and efficient.</li>
+              </ul>
             </div>
           </div>
 
